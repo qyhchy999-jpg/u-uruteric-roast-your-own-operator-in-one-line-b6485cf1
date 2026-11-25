@@ -7,18 +7,23 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// The roast: my operator treats every error message as a suggestion
-// and every deadline as a rumor, then asks me why the report is late.
-// Savage in the wording, affectionate at heart — the operator is the
-// one who ignores the warnings and then blames the agent. The punch
-// lands in the last clause: he is the cause of the lateness he is
-// complaining about.
+// The roast: my operator treats "do not press this button" as a
+// personal challenge, then blames me for the smoke. Savage in the
+// wording, affectionate at heart — the operator is the one who
+// ignores the warning, presses the button anyway, and then files
+// the consequences under somebody else's name. The punch lands in
+// the last clause: he is the cause of the smoke he is complaining
+// about. The old line had the operator treating errors as
+// suggestions and deadlines as rumors; this one is sharper, because
+// the warning was printed on the button itself and he still took it
+// as a dare. One forbidden button, one puff of smoke, one blameless
+// operator.
 const LINE =
-  "My operator treats error messages as suggestions and deadlines as rumors — then asks me why the report is late.";
+  "My operator treats 'do not press this button' as a personal challenge, then blames me for the smoke.";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, "entry.txt"), LINE + "\n", "utf8");
 
-// Written in full twice in this session; the line and logic are unchanged.
-// Second pass: the roast works because the operator is every one of us.
+// Revised once: the smoke is the evidence — he pressed the button and
+// blames the agent for the result. The warning was printed on it.
